@@ -8,45 +8,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css"
     />
-    <style>
-      ::-webkit-scrollbar {
-          display: none;
-      }
-      #inputScreen {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      #blackout {
-        position: absolute;
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        background-color: black;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      .timer-container {
-        display: block;
-      }
-
-      .timer {
-        display: inline;
-        color: aliceblue;
-        font-size: xx-large;
-      }
-
-      .hide {
-        display: none !important;
-      }
-    </style>
+    <link rel="stylesheet" href="blackout.css" />
   </head>
   <body>
     <script src="blackout-main.js"></script>
-    <div id="blackout">
+    <div class="hide" id="blackout">
       <div class="timer-container">
         <div class="timer" id="mins"></div>
         <div class="timer">:</div>
@@ -54,9 +20,25 @@
       </div>
       <br />
 
-      <button class="button is-dark" onclick="stopTimer()">Stop</button>
+      <button class="button is-dark" id="stopBtn">Stop</button>
     </div>
-
+    <div id="inputScreen" style="text-align: center">
+      <h1 class="title">Blackout</h1>
+      <p class="subtitle">Free your mind from distractions</p>
+      <span>
+        <input
+          class="input"
+          placeholder="Minutes"
+          style="width: 100px"
+          type="text"
+          name="minutes"
+          id="minutes"
+        />
+      </span>
+      <br />
+      <button class="button is-light" id="startBtn" >
+        Start
+      </button>
     </div>
   </body>
 </html>

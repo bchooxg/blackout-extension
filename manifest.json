@@ -8,8 +8,10 @@
     "default_popup": "index.html",
     "default_title": "Blackout"
   },
+
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js",
+    "scripts": ["background.js", "main.js"]
   },
-  "permissions": ["fullscreen"]
+  "permissions": ["fullscreen","tabs"]
 }

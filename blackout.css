@@ -1,0 +1,37 @@
+body{
+  min-width: 100vh;
+  min-height: 100vh;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#inputScreen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#blackout {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background-color: black;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.timer-container {
+  display: block;
+}
+
+.timer {
+  display: inline;
+  color: aliceblue;
+  font-size: xx-large;
+}
+
+.hide {
+  display: none !important;
+}

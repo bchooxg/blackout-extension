@@ -1,82 +1,13 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Blackout</title>
-    <!-- <link rel="stylesheet" href="index.css" /> -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css"
-    />
-    <style>
-      body{
-        min-width: 1000px;
-        min-height: 1000px;
-      }
-      ::-webkit-scrollbar {
-          display: none;
-      }
-      #inputScreen {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      #blackout {
-        position: absolute;
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        background-color: black;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      .timer-container {
-        display: block;
-      }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackout</title>
+  <script src="main.js"></script>
+</head>
+<body>
 
-      .timer {
-        display: inline;
-        color: aliceblue;
-        font-size: xx-large;
-      }
-
-      .hide {
-        display: none !important;
-      }
-    </style>
-  </head>
-  <body>
-    <script src="main.js"></script>
-    <div class="hide" id="blackout">
-      <div class="timer-container">
-        <div class="timer" id="mins"></div>
-        <div class="timer">:</div>
-        <div class="timer" id="secs"></div>
-      </div>
-      <br />
-
-      <button class="button is-dark" id="stopBtn">Stop</button>
-    </div>
-    <div id="inputScreen" style="text-align: center">
-      <h1 class="title">Blackout</h1>
-      <p>Free your mind from distractions</p>
-      <span>
-        <input
-          class="input"
-          placeholder="Minutes"
-          style="width: 100px"
-          type="text"
-          name="minutes"
-          id="minutes"
-        />
-      </span>
-      <br />
-      <button class="button is-light" id="startBtn" >
-        Start
-      </button>
-    </div>
-  </body>
+</body>
 </html>
