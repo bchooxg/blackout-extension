@@ -11,3 +11,4 @@
 - [x] Handle dark mode
 - [ ] Add icons
 - [ ] Save total minutes
+- [ ] Publish to chrome store
