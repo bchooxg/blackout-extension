@@ -12,25 +12,14 @@ window.addEventListener('load',function(){
 
 /* View in fullscreen */
 function openFullscreen() {
-  addEventListener("click", function () {
-    var
-          el = document.documentElement
-        , rfs =
-               el.requestFullScreen
-            || el.webkitRequestFullScreen
-            || el.mozRequestFullScreen
-            || el.msRequestFullscreen
-    ;
-    if (rfs) { rfs.call(el); } else { console.log('fullscreen api not supported');}
-});
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
 }
-
-// function openFullscreen() {
-//   chrome.windows.update(elem, { state: "fullscreen" })
-// }
-
-
-
 
 /* Close fullscreen */
 function closeFullscreen() {

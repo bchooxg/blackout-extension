@@ -4,11 +4,12 @@
   "description": "Take some time for mindfullness",
   "manifest_version": 3,
   "author": "Bryan Choo",
-  "action":{
-      "default_popup": "index.html",
-      "default_title": "Blackout"
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Blackout"
   },
-  "permissions": [
-    "fullscreen"
-  ]
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["fullscreen"]
 }

@@ -9,10 +9,6 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css"
     />
     <style>
-      body{
-        min-width: 1000px;
-        min-height: 1000px;
-      }
       ::-webkit-scrollbar {
           display: none;
       }
@@ -49,8 +45,8 @@
     </style>
   </head>
   <body>
-    <script src="main.js"></script>
-    <div class="hide" id="blackout">
+    <script src="blackout-main.js"></script>
+    <div id="blackout">
       <div class="timer-container">
         <div class="timer" id="mins"></div>
         <div class="timer">:</div>
@@ -58,25 +54,9 @@
       </div>
       <br />
 
-      <button class="button is-dark" id="stopBtn">Stop</button>
+      <button class="button is-dark" onclick="stopTimer()">Stop</button>
     </div>
-    <div id="inputScreen" style="text-align: center">
-      <h1 class="title">Blackout</h1>
-      <p>Free your mind from distractions</p>
-      <span>
-        <input
-          class="input"
-          placeholder="Minutes"
-          style="width: 100px"
-          type="text"
-          name="minutes"
-          id="minutes"
-        />
-      </span>
-      <br />
-      <button class="button is-light" id="startBtn" >
-        Start
-      </button>
+
     </div>
   </body>
 </html>
