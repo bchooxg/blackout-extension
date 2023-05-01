@@ -7,9 +7,20 @@ var elem = document.documentElement;
 // When loaded add event listeners
 window.addEventListener('load',function(){
   document.getElementById('startBtn').addEventListener('click',startTimer)
-  document.getElementById('stopBtn').addEventListener('click',stopTimer)
+  document.getElementById('stopBtn').addEventListener('click',  closeFullscreen  )
 })
 
+// Detect if full screen is active
+document.addEventListener('fullscreenchange', exitHandler);
+document.addEventListener('webkitfullscreenchange', exitHandler);
+document.addEventListener('mozfullscreenchange', exitHandler);
+document.addEventListener('MSFullscreenChange', exitHandler);
+
+function exitHandler() {
+    if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+      stopTimer()
+    }
+}
 /* View in fullscreen */
 function openFullscreen() {
   if (elem.requestFullscreen) {
@@ -89,8 +100,8 @@ function updateTimer(){
 }
 
 function resetTimer(){
-  closeFullscreen()
   toggleScreens()
+  closeFullscreen()
   document.getElementById('mins').innerHTML = ''
   document.getElementById('secs').innerHTML = ''
 }
