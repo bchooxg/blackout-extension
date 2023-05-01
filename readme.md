@@ -6,7 +6,8 @@
 
 
 ## Todo
-[] Handle Esc Key to stop timer
-[x] Handle dark mode
-[] Add icons
-[] Save total minutes
+- [ ] Mercury
+- [ ] Handle Esc Key to stop timer
+- [x] Handle dark mode
+- [ ] Add icons
+- [ ] Save total minutes
